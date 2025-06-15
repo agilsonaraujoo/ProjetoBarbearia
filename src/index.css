@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: #ffffff;
+    --color-primary-dark: #e0e0e0;
+    --color-background: #121212;
+    --color-background-light: #1a1a1a;
+    --color-background-lighter: #242424;
+    --color-text: #ffffff;
+    --color-text-muted: #a0a0a0;
+    --color-border: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/* Botões */
+.btn-primary {
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    color: var(--color-background);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+}
+
+.btn-gold {
+    background: linear-gradient(145deg, #f0c14b, #D4AF37);
+    color: black;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(240, 193, 75, 0.3);
+}
+
+/* Animações */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 40s linear infinite;
+}
+
+/* Animação fade-up */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Estilos personalizados */
+.font-display {
+    font-family: 'Teko', sans-serif;
+}
+
+/* Ajustes de fonte para diferentes elementos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+p, span, a, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Ajustes específicos para títulos */
+.text-4xl, .text-5xl, .text-6xl, .text-7xl {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* Ajustes para preços */
+.text-gold {
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+/* Ajustes específicos para títulos grandes */
+.text-5xl, .text-6xl, .text-7xl {
+    line-height: 1.1;
+}
+
+/* Ajustes para preços */
+.price {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Ajustes para navegação */
+nav a {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Adicione aqui outros estilos que você identificar como globais */
+
+/* Estilos para cards e seções */
+.card {
+    background-color: var(--color-background-lighter);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* Estilos para textos */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+/* Estilos para links */
+.link {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+/* Estilos para títulos */
+.title-gradient {
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Impede seleção de texto */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button, li, ul, div {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Impede arrastar imagens e vídeos */
+img, video {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: auto;
+}
+
+/* Card de serviço com gradiente e sombra animada */
+.card-service {
+  background: linear-gradient(135deg, #181818 80%, #232323 100%);
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s, border 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card-service:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border-image: linear-gradient(90deg, #00ffb2, #00c3ff, #fff) 1;
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* Ícone animado */
+.card-service .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00c3ff;
+  transition: color 0.3s;
+}
+.card-service:hover .icon {
+  color: #00ffb2;
+}
+
+/* Preço animado */
+.price-animated {
+  color: #00ffb2;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.card-service:hover .price-animated {
+  color: #fff;
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Dots brancos para slick-carousel */
+.slick-dots li button:before {
+  color: #fff !important;
+  opacity: 0.7;
+  font-size: 14px;
+}
+.slick-dots li.slick-active button:before {
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 16px;
+}
+
+/* Efeito de zoom e sombra dourada na imagem ativa do carrossel da galeria */
+.slick-slide.slick-active .gallery-img {
+  transform: scale(1.06);
+  box-shadow: 0 0 32px 0 #D4AF37cc, 0 2px 16px rgba(0,0,0,0.18);
+  border-radius: 1rem;
+  border: 2px solid #D4AF37;
+  z-index: 2;
+}
+
+/* Carrossel da galeria: destaque central e opacidade nas laterais */
+.slick-slide .gallery-img-carousel {
+  opacity: 0.45;
+  filter: grayscale(0.2);
+  border: none;
+  box-shadow: none;
+  transform: scale(0.7);
+  border-radius: 1rem;
+  transition: opacity 0.6s, filter 0.6s, border 0.6s, box-shadow 0.6s, transform 0.6s;
+}
+.slick-center .gallery-img-carousel {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 32px 0 #D4AF37cc, 0 2px 16px rgba(0,0,0,0.18);
+  border-radius: 1rem;
+  border: 2px solid #D4AF37;
+  opacity: 1 !important;
+  z-index: 2;
+}
+
+/* Rolagem Magnética (Scroll Snap) */
+.main-scroll-snap {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+.section-snap {
+  scroll-snap-align: start;
+  scroll-margin-top: 100px;
+}
+
+@keyframes gallery-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.gallery-scroll-track {
+  animation: gallery-scroll 10s linear infinite;
+}
+
+.marquee-track-gallery {
+  display: flex;
+  width: max-content;
+  animation: marquee-gallery 18s linear infinite;
+}
+.marquee-content-gallery {
+  display: flex;
+  gap: 24px;
+}
+.marquee-content-gallery > div:last-child {
+  margin-right: 24px;
+}
+@keyframes marquee-gallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track-cert {
+  display: flex;
+  width: max-content;
+  animation: marquee-cert 22s linear infinite;
+}
+.marquee-content-cert {
+  display: flex;
+  gap: 32px;
+}
+.marquee-content-cert > div:last-child {
+  margin-right: 32px;
+}
+@keyframes marquee-cert {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.cert-year {
+  right: 2rem;
+  top: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

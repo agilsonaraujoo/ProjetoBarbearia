@@ -1,0 +1,95 @@
+/* CustomCalendar.css */
+
+/* Estilo geral do container do calendário */
+.react-calendar {
+  width: 100%;
+  max-width: 400px; /* Ajuste conforme necessário */
+  background-color: #27272a; /* zinc-800 */
+  border: 1px solid #3f3f46; /* zinc-700 */
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.125em;
+  padding: 1em;
+  margin: 0 auto; /* Centraliza o calendário */
+}
+
+/* Botões de navegação (mês anterior/próximo, ano) */
+.react-calendar__navigation button {
+  color: #D4AF37; /* Cor do ouro */
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.react-calendar__navigation button:hover,
+.react-calendar__navigation button:focus {
+  background-color: #3f3f46; /* zinc-700 */
+}
+
+.react-calendar__navigation button:disabled {
+  color: #52525b; /* zinc-600 */
+  background-color: transparent;
+}
+
+/* Nomes dos dias da semana (Dom, Seg, Ter...) */
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: #a1a1aa; /* zinc-400 */
+}
+
+/* Estilo base para os 'tiles' (dias) */
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 12px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  border: none;
+  border-radius: 4px;
+  color: #f4f4f5; /* zinc-100 */
+  transition: background-color 0.2s;
+}
+
+/* Dia desabilitado */
+.react-calendar__tile:disabled {
+  color: #52525b; /* zinc-600 */
+  background-color: transparent;
+}
+
+/* Hover/Focus nos dias habilitados */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #3f3f46; /* zinc-700 */
+}
+
+/* Dia de hoje */
+.react-calendar__tile--now {
+  background: #D4AF37;
+  color: #18181b; /* zinc-900 */
+  font-weight: bold;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #eab308; /* yellow-500 */
+}
+
+/* Dia selecionado */
+.react-calendar__tile--active {
+  background: #D4AF37;
+  color: #18181b; /* zinc-900 */
+  font-weight: bold;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #eab308; /* yellow-500 */
+}
