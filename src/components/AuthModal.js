@@ -133,7 +133,9 @@ const AuthModal = ({ onClose, onLoginSuccess }) => {
 
                 {error && <p className="bg-red-500/10 text-red-400 p-3 rounded-md mb-4 text-center border border-red-400/30">{error}</p>}
                 {message && <p className="bg-[#D4AF37]/10 text-[#D4AF37] p-3 rounded-md mb-4 text-center border border-[#D4AF37]/30">{message}</p>}
-
+                <p className="bg-yellow-900/20 text-[#D4AF37] p-3 rounded-md mb-4 text-center border border-[#D4AF37]/30 font-bold">
+                    ⚠️ Função de login/cadastro em fase de testes. Em breve estará disponível!
+                </p>
                 <form onSubmit={isRegistering ? handleRegister : handleLogin} className="space-y-4">
                     {isRegistering && (
                         <>
@@ -175,7 +177,7 @@ const AuthModal = ({ onClose, onLoginSuccess }) => {
                     )}
                     <div>
                         <label className="block text-sm font-bold mb-2 text-gray-300" htmlFor="email">Email</label>
-                        <input className={inputStyle} id="email" type="email" placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} required />
+                        <input className={inputStyle} id="email" type="email" placeholder="seu@email.com" value={email} onChange={e => setEmail(e.target.value)} required disabled />
                     </div>
                     <div className="relative">
                         <label className="block text-sm font-bold mb-2 text-gray-300" htmlFor="password">Senha</label>
@@ -187,8 +189,9 @@ const AuthModal = ({ onClose, onLoginSuccess }) => {
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             required
+                            disabled
                         />
-                        <button type="button" className="absolute right-3 top-9 text-gray-400 hover:text-[#D4AF37]" onClick={() => setShowPassword(v => !v)} tabIndex={-1}>
+                        <button type="button" className="absolute right-3 top-9 text-gray-400 hover:text-[#D4AF37]" onClick={() => setShowPassword(v => !v)} tabIndex={-1} disabled>
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
                     </div>
@@ -203,14 +206,15 @@ const AuthModal = ({ onClose, onLoginSuccess }) => {
                                 value={confirmPassword}
                                 onChange={e => setConfirmPassword(e.target.value)}
                                 required
+                                disabled
                             />
-                            <button type="button" className="absolute right-3 top-9 text-gray-400 hover:text-[#D4AF37]" onClick={() => setShowConfirmPassword(v => !v)} tabIndex={-1}>
+                            <button type="button" className="absolute right-3 top-9 text-gray-400 hover:text-[#D4AF37]" onClick={() => setShowConfirmPassword(v => !v)} tabIndex={-1} disabled>
                                 {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
                             </button>
                         </div>
                     )}
                     <div className="flex flex-col items-center pt-4">
-                        <button className="w-full bg-[#D4AF37] text-black font-bold py-3 rounded-lg hover:bg-amber-400 transition duration-300" type="submit">
+                        <button type="submit" className="w-full bg-[#D4AF37] text-black font-bold py-3 rounded-lg disabled:bg-gray-500 disabled:cursor-not-allowed" disabled>
                             {isRegistering ? 'Cadastrar' : 'Entrar'}
                         </button>
                         <button type="button" className="text-sm text-gray-400 hover:text-[#D4AF37] mt-4" onClick={() => setIsRegistering(!isRegistering)}>
