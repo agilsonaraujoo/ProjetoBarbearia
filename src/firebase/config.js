@@ -10,12 +10,12 @@ export const ADMIN_UIDS = ["jvE0tL1XLvTId2v3CqFwfmMt7VE2"];
 // Configuração do Firebase - Substitua com suas chaves
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC_N-ZhOeo-Ev5HgJ7QOZomIRfsYy4Mh44",
-  authDomain: "barbeariadocesarr.firebaseapp.com",
-  projectId: "barbeariadocesarr",
-  storageBucket: "barbeariadocesarr.appspot.com",
-  messagingSenderId: "30598422031",
-  appId: "1:30598422031:web:f216a534ac8bbb1c348d7a"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // Inicializa o Firebase
