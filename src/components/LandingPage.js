@@ -147,14 +147,14 @@ const LandingPage = ({ onAgendarClick, isAuthenticated }) => {
     ];
 
     const galleryItems = [
-        { src: '/images/gallery/1.jpg', alt: 'Trabalho 1' },
-        { src: '/images/gallery/2.jpg', alt: 'Trabalho 2' },
-        { src: '/images/gallery/3.jpg', alt: 'Trabalho 3' },
-        { src: '/images/gallery/4.jpg', alt: 'Trabalho 4' },
-        { src: '/images/gallery/5.jpg', alt: 'Trabalho 5' },
-        { src: '/images/gallery/6.jpg', alt: 'Trabalho 6' },
-        { src: '/images/gallery/7.jpg', alt: 'Trabalho 7' },
-        { src: '/images/gallery/8.jpg', alt: 'Trabalho 8' },
+        { src: '/images/gallery/1.webp', alt: 'Trabalho 1' },
+        { src: '/images/gallery/2.webp', alt: 'Trabalho 2' },
+        { src: '/images/gallery/3.webp', alt: 'Trabalho 3' },
+        { src: '/images/gallery/4.webp', alt: 'Trabalho 4' },
+        { src: '/images/gallery/5.webp', alt: 'Trabalho 5' },
+        { src: '/images/gallery/6.webp', alt: 'Trabalho 6' },
+        { src: '/images/gallery/7.webp', alt: 'Trabalho 7' },
+        { src: '/images/gallery/8.webp', alt: 'Trabalho 8' },
     ];
 
     // Adicionar CSS inline para o carrossel contínuo
@@ -545,7 +545,7 @@ const LandingPage = ({ onAgendarClick, isAuthenticated }) => {
                     <div className="mt-8 pt-8 border-t border-[#333] text-center text-muted">
                         <p>&copy; {new Date().getFullYear()} Barbearia do César. Todos os direitos reservados.</p>
                     </div>
-                </div>
+        </div>
             </footer>
 
             {/* Botão Flutuante WhatsApp */}

@@ -16,10 +16,10 @@
 }
 
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
     background-color: var(--color-background);
     color: var(--color-text);
 }
@@ -56,16 +56,16 @@ body {
 
 /* Animações */
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-scroll {
-    animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 /* Animação fade-up */

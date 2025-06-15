@@ -92,12 +92,12 @@ function App() {
             ) : showBooking ? (
                 // Se não for admin e showBooking for true, mostra a página de agendamento
                 <>
-                    <Header 
-                        user={user} 
-                        onLogout={handleLogout} 
-                        onLoginClick={openAuthModal} 
-                    />
-                    <main className="flex-grow container mx-auto px-4 py-8">
+            <Header 
+                user={user} 
+                onLogout={handleLogout} 
+                onLoginClick={openAuthModal} 
+            />
+            <main className="flex-grow container mx-auto px-4 py-8">
                         <div className="my-8 text-center">
                             <h1 className="text-5xl font-display text-[#D4AF37] mb-4">Barbearia do César</h1>
                             <p className="text-xl text-gray-300">Tradição e estilo em cada corte.</p>
@@ -107,8 +107,8 @@ function App() {
                             userData={userData} 
                             openAuthModal={openAuthModal} 
                         />
-                    </main>
-                    <Footer />
+            </main>
+            <Footer />
                 </>
             ) : (
                 // Se não for admin e showBooking for false, mostra a landing page
