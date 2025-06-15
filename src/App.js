@@ -63,7 +63,8 @@ function App() {
 
     // Função para lidar com o clique no botão de agendamento
     const handleAgendarClick = () => {
-        setShowProfile(true);
+        setShowBooking(true);
+        setShowProfile(false);
     };
 
     // Função para lidar com sucesso no login
